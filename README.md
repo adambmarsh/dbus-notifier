@@ -21,7 +21,7 @@ The simplest code instantiating NotifySender and sending a dbus notification is 
 ```commandline
     sender = NotifySender(title="My notifier")
     ...
-    sender.notify(message="Hi!"
+    sender.notify(message="Hi!")
 ```
 The above code results in a single message "Hi!" being posting in the notification area.
 
