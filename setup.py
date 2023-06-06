@@ -12,14 +12,14 @@ requirements = [
 ]
 
 setuptools.setup(
-    name="dbusnotifyr",
-    version="0.1.1",
+    name="dbus_notifier",
+    version="0.1.3",
     author="Adam Bukolt",
     author_email="abukolt@gmx.com",
     description="Package to post dbus notifications on Linux",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    data_files=[('dbusnotifier/icons', ['dbusnotifier/icons/feather_on_grey.png']),
+    data_files=[('dbus_notifier/icons', ['dbus_notifier/icons/feather_on_grey.png']),
                 ('./', ['.env_dbus_notifier'])],
     install_requires=requirements,
     packages=setuptools.find_packages(),
