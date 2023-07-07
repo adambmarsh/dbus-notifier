@@ -4,7 +4,7 @@ This library offers a simple means of generating dbus notifications on Linux.
 
 ## Installation and Usage
 
-Make sure at least Python 3.10 is installed on the target Linux system. 
+Make sure at least Python 3.* is installed on the target Linux system. 
 
 Install virtualenv in which to install `dbus-notifier`.
 
