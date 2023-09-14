@@ -1,6 +1,4 @@
-import argparse
 import os
-import sys
 
 import dbusnotify
 from dotenv import dotenv_values
@@ -62,27 +60,3 @@ class NotifySender(object):
             return
 
         self._post_notification(title, message)
-
-
-def main():
-    parser = argparse.ArgumentParser(description="This program posts dbus notification messages.")
-    parser.add_argument("-t", "--summary", help="A string containing the summary to use in notifications.",
-                        type=str,
-                        dest='title',
-                        default='',
-                        required=False)
-    parser.add_argument("-n", "--messages", help="A dictionary containing notification codes and messages.",
-                        type=str,
-                        dest='notifications',
-                        default=dict(),
-                        required=False)
-
-    args = parser.parse_args()
-
-    sender = NotifySender(args.title, args.notifications)
-
-    sender.notify(message="Post this")
-
-
-if __name__ == '__main__':
-    sys.exit(main())
