@@ -63,3 +63,4 @@ target/
 # Project specific
 .env*
 README.html
+.testpypirc
