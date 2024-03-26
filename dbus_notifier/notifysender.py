@@ -1,3 +1,6 @@
+"""
+This module provides very simple dbus notifications.
+"""
 import os
 
 import dbusnotify
@@ -7,7 +10,12 @@ from dotenv import dotenv_values
 __version__ = '0.0.0'
 
 
-class NotifySender(object):
+class NotifySender:
+    """
+    This class represents a sender of dbus notifications. It can post individual messages or you can intitialise it
+    with a dictionary of messages. If the dictionary is present, notifications can be posted by calling the method
+    notify with a message selection key.
+    """
 
     def __init__(self, title, messages=None):
         self._title = None
@@ -16,7 +24,7 @@ class NotifySender(object):
         self.messages = messages
 
     @property
-    def title(self):
+    def title(self):  # pylint: disable=missing-function-docstring
         return self._title
 
     @title.setter
@@ -25,13 +33,23 @@ class NotifySender(object):
 
     @property
     def messages(self):
+        """
+        A dictionary of pre-prepared messages that can be selected using a key.
+        :return: The value of a private member variable
+        """
         return self._messages
 
     @messages.setter
     def messages(self, in_dict=None):
-        self._messages = in_dict or dict()
+        self._messages = in_dict or {}
 
     def _post_notification(self, in_title="", in_description=""):
+        """
+        This private method posts notifications
+        :param in_title: A string containing the notification title
+        :param in_description: A string containing the notification message
+        :return: void
+        """
         ve_path = os.getenv("VIRTUAL_ENV")
         ve_config = dotenv_values(os.path.join(ve_path, ".env_dbus_notifier"))
 
@@ -50,6 +68,13 @@ class NotifySender(object):
         )
 
     def notify(self, message=None, select_key=None):
+        """
+        This method posts notifications.
+        :param message: A string containing the notification message
+        :param select_key: A key value to select a message from a dictionary of messages, if available (this key is
+        not needed if `message` is provided)
+        :return: void
+        """
         title = self.title
 
         if select_key and self.messages:
