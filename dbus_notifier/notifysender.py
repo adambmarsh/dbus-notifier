@@ -7,12 +7,9 @@ import dbusnotify
 from dotenv import dotenv_values
 
 
-__version__ = '0.0.0'
-
-
 class NotifySender:
     """
-    This class represents a sender of dbus notifications. It can post individual messages or you can intitialise it
+    This class represents a sender of dbus notifications. It can post individual messages, or you can initialise it
     with a dictionary of messages. If the dictionary is present, notifications can be posted by calling the method
     notify with a message selection key.
     """
