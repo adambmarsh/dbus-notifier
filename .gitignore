@@ -60,6 +60,9 @@ target/
 *.csv
 # *.json
 
+# uv
+uv.lock
+
 # Project specific
 .env*
 README.html
