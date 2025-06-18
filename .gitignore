@@ -22,6 +22,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+.pypirc
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -67,3 +68,4 @@ uv.lock
 .env*
 README.html
 .testpypirc
+.pypirc
