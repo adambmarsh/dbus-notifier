@@ -42,6 +42,7 @@ Please see `pyproject.toml`.
 ## Status
 
 Mar 2023 First draft, tested locally on Manjaro Linux.
+Apr 2025 release.
 
 ## Copyright
 
