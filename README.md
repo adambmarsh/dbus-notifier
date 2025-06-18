@@ -37,7 +37,7 @@ key identifies a message. The code below illustrates this case:
 
 ## Dependencies
 
-Please see `requirements.txt`.
+Please see `pyproject.toml`.
 
 ## Status
 

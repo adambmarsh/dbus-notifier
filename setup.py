@@ -13,7 +13,7 @@ requirements = [
 
 setuptools.setup(
     name="dbus_notifier",
-    version="0.1.9",
+    version="0.2.0",
     author="Adam Bukolt",
     author_email="abukolt@gmx.com",
     description="Package to post dbus notifications on Linux",
