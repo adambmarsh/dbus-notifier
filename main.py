@@ -26,8 +26,8 @@ def main():
     sender = NotifySender(args.title, args.notifications)
 
     # sender.notify(message="Post this")
-    sender.notify(select_key=str(2))
     sender.notify(select_key=str(1))
+    sender.notify(select_key=str(2))
 
 
 if __name__ == '__main__':
