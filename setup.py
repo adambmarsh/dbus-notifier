@@ -8,12 +8,12 @@ requirements = [
     'dbus-next==0.2.3',
     'dbus-python==1.3.2',
     'dbusnotify==0.0.2',
-    'python-dotenv==1.0.2'
+    'python-dotenv==1.0.3'
 ]
 
 setuptools.setup(
     name="dbus_notifier",
-    version="1.0.2",
+    version="1.0.3",
     author="Adam Bukolt",
     author_email="abukolt@gmx.com",
     description="Package to post dbus notifications on Linux",
