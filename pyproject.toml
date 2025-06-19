@@ -1,10 +1,14 @@
 [build-system]
-requires = ["setuptools>=67.3.3"]
+requires = [
+    "setuptools>=67.3.3",
+    "bumpversion",
+    "bump2version"
+]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "dbus-notifier"
-version = "1.0.2"
+version = "1.0.3"
 authors = [
   { name="Adam Bukolt", email="abukolt@gmx.com" },
 ]
@@ -22,8 +26,6 @@ dependencies = [
     "attrs==25.3.0",
     "bleach==6.2.0",
     "build==1.2.2.post1",
-    "bump2version==1.0.2",
-    "bumpversion==0.6.0",
     "certifi==2025.6.15",
     "cffi==1.17.1",
     "charset-normalizer==3.4.2",
