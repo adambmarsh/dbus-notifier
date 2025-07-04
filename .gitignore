@@ -69,3 +69,4 @@ uv.lock
 README.html
 .testpypirc
 .pypirc
+pylintrc
