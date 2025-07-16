@@ -1,3 +1,7 @@
+"""
+module: test harness for dbus-notifier
+"""
+
 import argparse
 import sys
 
@@ -5,6 +9,10 @@ from dbus_notifier.notifysender import NotifySender
 
 
 def main():
+    """
+    main function
+    :return: void
+    """
     parser = argparse.ArgumentParser(description="This program is a very simple test harness for NotifySender "
                                                  "which posts dbus notification messages.")
     parser.add_argument("-t", "--summary", help="A string containing the summary to use in notifications.",
@@ -15,7 +23,7 @@ def main():
     parser.add_argument("-n", "--messages", help="A dictionary containing notification codes and messages.",
                         type=str,
                         dest='notifications',
-                        default=dict(),
+                        default={},
                         required=False)
 
     args = parser.parse_args()
