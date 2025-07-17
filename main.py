@@ -4,6 +4,8 @@ module: test harness for dbus-notifier
 
 import argparse
 import sys
+import time
+
 
 from dbus_notifier.notifysender import NotifySender
 
@@ -34,8 +36,13 @@ def main():
     sender = NotifySender(args.title, args.notifications)
 
     # sender.notify(message="Post this")
-    sender.notify(select_key=str(1))
-    sender.notify(select_key=str(2))
+    if not args.notifications:
+        print("No notifications received")
+        return
+
+    for key in args.notifications.keys():
+        time.sleep(0.5)
+        sender.notify(select_key=str(key))
 
 
 if __name__ == '__main__':
